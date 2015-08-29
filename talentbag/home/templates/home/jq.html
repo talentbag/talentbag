@@ -1,0 +1,246 @@
+
+    <!--.........
+./////////////////
+..............before send is clicked ........................
+....................
+..............................
+......-->
+
+     <script>
+
+        //DOM loaded 
+        $(document).ready(function() {
+
+            $(".standard").css("display","none"); 
+            $(".standard-plan .panel-footer").css("display","block"); 
+            $(".probono").css("display","none"); 
+            $(".probono-plan .panel-footer").css("display","block"); 
+            $(".planb").css("display","none"); 
+            $(".planb-plan .panel-footer").css("display","block"); 
+          
+            //attach click event to buttons
+            $('.standard-plan .know-more').click(function(){
+                
+                $("html, body").animate({ scrollTop: $(".standard-plan .know-more").offset().top }, 1500);
+                $(".standard").css("display","block"); 
+                $(".standard-plan .panel-footer").css("display","none"); 
+                 
+
+            });
+
+            $('.standard .close').click(function(){
+                
+                //same thing happens except in this case we hide the element
+                 $(".panel-body.standard").css("display","none"); 
+                $(".standard-plan .panel-footer").css("display","block"); 
+
+            });
+
+//attach click event to buttons
+            $('.probono-plan .know-more').click(function(){
+                
+                 $("html, body").animate({ scrollTop: $(".probono-plan .know-more").offset().top }, 1500);
+                $(".probono").css("display","block"); 
+                $(".probono-plan .panel-footer").css("display","none"); 
+                 
+            });
+
+            $('.probono .close').click(function(){
+                
+                //same thing happens except in this case we hide the element
+                 $(".panel-body.probono").css("display","none"); 
+                $(".probono-plan .panel-footer").css("display","block"); 
+
+            });
+        
+ //attach click event to buttons
+            $('.planb-plan .know-more').click(function(){
+                
+                 $("html, body").animate({ scrollTop: $(".planb-plan .know-more").offset().top }, 1500);
+                $(".planb").css("display","block"); 
+                $(".planb-plan .panel-footer").css("display","none"); 
+                
+
+            });
+
+            $('.planb .close').click(function(){
+                
+                //same thing happens except in this case we hide the element
+                 $(".panel-body.planb").css("display","none"); 
+                $(".planb-plan .panel-footer").css("display","block"); 
+
+            });
+        
+
+
+
+
+        });
+ 
+
+    </script>
+
+
+ 
+
+<!--.........
+./////////////////
+..............Hide forms respective of their type plans ........................
+....................
+..............................
+......-->
+
+ {% if type_plan  == "probono" %}
+
+
+      <script>
+        //DOM loaded 
+        
+        $(document).ready(function() {
+          
+           
+            $(".standard").css("display","none"); 
+            $(".standard-plan .panel-footer").css("display","block"); 
+            $(".planb").css("display","none"); 
+            $(".planb-plan .panel-footer").css("display","block"); 
+
+        });
+    </script>
+
+
+    <!--.........
+./////////////////
+..............after send is clicked ........................
+....................
+..............................
+......-->
+
+    {% if form.non_field_errors or form.email.errors %} 
+ 
+ 
+    <script>
+
+   
+        
+         $("html, body").animate({ scrollTop: $(".probono-plan .know-more").offset().top }, 1500);
+        //DOM loaded 
+        $(document).ready(function() {
+          
+           
+            $(".probono").css("display","block"); 
+            $(".probono-plan .panel-footer").css("display","none"); 
+        });
+    </script>
+
+    {% endif %}
+
+
+    <!--.........
+./////////////////
+..............end after send is clicked ........................
+....................
+..............................
+......-->
+
+{% elif type_plan  == "standard" %}
+
+    <script>
+        //DOM loaded 
+         
+        $(document).ready(function() {
+          
+           
+            $(".probono").css("display","none"); 
+            $(".probono-plan .panel-footer").css("display","block"); 
+            $(".planb").css("display","none"); 
+            $(".planb-plan .panel-footer").css("display","block"); 
+
+        });
+    </script>
+
+
+    <!--.........
+./////////////////
+..............after send is clicked ........................
+....................
+..............................
+......-->
+
+    {% if form.non_field_errors or form.email.errors %} 
+ 
+ 
+    <script>
+
+   
+        
+
+         $("html, body").animate({ scrollTop: $(".standard-plan .know-more").offset().top }, 1500);
+        //DOM loaded 
+        $(document).ready(function() {
+          
+           
+            $(".standard").css("display","block"); 
+            $(".standard-plan .panel-footer").css("display","none"); 
+        });
+    </script>
+
+    {% endif %}
+
+
+    <!--.........
+./////////////////
+..............end after send is clicked ........................
+....................
+..............................
+......-->
+
+{% elif type_plan  == "planb" %}
+    <script>
+        //DOM loaded 
+         
+        $(document).ready(function() {
+          
+           
+            $(".standard").css("display","none"); 
+            $(".standard-plan .panel-footer").css("display","block"); 
+            $(".probono").css("display","none"); 
+            $(".probono-plan .panel-footer").css("display","block"); 
+
+        });
+    </script>
+
+
+    <!--.........
+./////////////////
+..............after send is clicked ........................
+....................
+..............................
+......-->
+
+    {% if form.non_field_errors or form.email.errors %} 
+ 
+ 
+    <script>
+         $("html, body").animate({ scrollTop: $(".planb-plan .know-more").offset().top }, 1500);
+        //DOM loaded 
+        $(document).ready(function() {
+          
+           
+            $(".planb").css("display","block"); 
+            $(".planb-plan .panel-footer").css("display","none"); 
+        });
+    </script>
+
+    {% endif %}
+
+
+    <!--.........
+./////////////////
+..............end after send is clicked ........................
+....................
+..............................
+......-->
+
+
+
+ {% endif %}
