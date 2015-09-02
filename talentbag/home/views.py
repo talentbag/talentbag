@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from home.models import Contact
 from django.contrib import messages
+from django.core.mail import send_mail
 
 # Create your views here.
 
@@ -32,11 +33,13 @@ class HomeView(FormView):
         type_plan = request.POST.get('type', '')
         if form.is_valid():
             # <process form cleaned data>
-            email = request.POST.get('email', '')
+            email_var = request.POST.get('email', '')
+            message_var = request.POST.get('message', '')
             
-            email_obj = Contact(email=email)
+            email_obj = Contact(email=email_var)
             email_obj.validate_unique(exclude=None);
             email_obj.save()
+            send_mail("type:"+type_plan+" email:"+email_var,message_var,'lol1@gmail.com',['hr@talentbag.com'],fail_silently=False)
 
             messages.add_message(self.request, messages.SUCCESS, 'Email sent.We will reach out asap!')
 

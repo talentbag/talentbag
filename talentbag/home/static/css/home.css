@@ -27,9 +27,12 @@ header p{
     font-weight: 300;
     font-size:26px;
     letter-spacing:-0.02em;
+    text-align: center;
 }
 
-
+.label-danger{
+    background: #d9534f;
+}
 
 
 img{

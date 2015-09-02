@@ -1,0 +1,125 @@
+/*!
+ * Start Bootstrap - Heroic Features HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+ .navbar{
+    padding-bottom:20px;
+ }
+
+header{
+    padding-top:10px;
+    padding-bottom: 20px;
+}
+
+header h1{
+    text-align: center;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size:72px;
+    letter-spacing:.15em;
+}
+
+header p{
+
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size:26px;
+    letter-spacing:-0.02em;
+}
+
+
+
+
+img{
+    width:200px;
+
+ }
+
+a.careers:hover,a.careers:focus{
+    text-decoration: none;
+}
+
+.modal{
+    top:15%;
+}
+
+.modal .close{
+    margin-top:-2px;
+    padding:5px;
+}
+
+textarea {
+    resize: none;
+}
+
+.alert{
+    border: 2px solid #d9534f;
+    color:#d9534f;
+    text-align: center; 
+    padding:3px;
+}
+
+.alert button{
+    font-size:18px;
+    color:#d9534f;
+    opacity:1;
+}
+
+.alert button:hover,.alert button:focus{
+    color:#d9534f;
+}
+
+
+form .form-group{
+    padding-left: 9%;
+    padding-right: 9%;
+}
+
+form .errorlist{
+    color:#d9534f;
+}
+
+form .email
+{
+    width:100% !important;
+}
+
+form #id_email{
+    width:85%;
+    padding-left:10px;
+}
+
+form textarea{
+    padding-left:10px;
+}
+
+form ul{
+    padding-left: 0;
+    padding-right:0;
+    list-style: none;
+    
+}
+
+
+
+.social-icon
+    {
+        padding-top: 6px;
+        font-size: 16px;
+        text-align: center;
+        width: 32px;
+        height: 32px;
+        border: 2px solid #777;
+        border-radius: 50%;
+        color: #777;
+        margin: 5px;
+    }
+
+    a.social-icon:hover, a.social-icon:active, a.social-icon:focus
+    {
+        text-decoration: none;
+        color: #434343;
+        border-color: #434343;
+    }
