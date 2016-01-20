@@ -29,8 +29,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'talentbag',
         'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '',   
+        'PASSWORD': 'hello',
+        'HOST': '/Applications/MAMP/tmp/mysql/mysql.sock',   
         'PORT': '',
     }
 }

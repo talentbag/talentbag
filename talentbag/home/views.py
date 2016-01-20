@@ -11,10 +11,11 @@ from django.core.mail import send_mail
 
 
 
+
 class HomeView(FormView):
 
     form_class = ContactForm
-    template_name = 'home/index.html'
+    template_name = 'home/virtual-rec.html'
     success_url = '/'
 
 
