@@ -541,6 +541,11 @@ a.careers:hover,a.careers:focus{
 .v-center-pr {
     left: 25%;
 }   
+
+.control-nav .col-xs-offset-1.social{
+    margin-left: 0;
+}
+
 }
 
 @media (min-width: 448px) and (max-width: 767px){
@@ -635,16 +640,16 @@ color: #fff;
 #slideit section {
     margin: 0;
     overflow: hidden;
-    width: 80px;
+    width: 67px;
     height: auto;
     right: 0;
-    top: 5%;
+    top: 65%;
     position: absolute;
     z-index: 10;
     background: #fff;
     -webkit-backface-visibility: hidden
 }
-
+/*
 #slideit input#close-item:checked~section,
 #slideit section {
     -webkit-transform: translateX(100%);
@@ -661,12 +666,13 @@ color: #fff;
     -o-transform: translateX(0);
     transform: translateX(0)
 }
-
+*/
 #slideit section .wrap {
     position: relative;
     width: 100%;
     height: auto
 }
+
 
 #slideit .package,
 #slideit .row,
@@ -682,7 +688,9 @@ color: #fff;
 #slideit .title {
     width: 100%;
     display: block;
-    padding: 10px;
+    padding: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
     background-color: #E37F03;
     color: #fff;
 
@@ -710,14 +718,15 @@ color: #fff;
     color: #fff;
     border: ridge 1px #E37F03;
     max-width: none;
+    right: -101px;
 }
-
+/*
 #slideit label.open {
     font-size: 14px;
     font-weight: 700;
     
     width: 35px;
-    top: 50%;
+    top: 65%;
     right: -101px;
     left: auto;
     bottom: auto;
@@ -747,7 +756,8 @@ color: #fff;
 #slideit label.close:hover {
     background: #E37F03;
 }
-
+*/
+/*
 #slideit .row,
 #slideit a,
 #slideit label {
@@ -773,4 +783,4 @@ color: #fff;
     -o-transition: right .3s ease .4s, background .1s ease, color .1s ease;
     transition: right .3s ease .4s, background .1s ease, color .1s ease
 }
-
+*/
