@@ -22,10 +22,12 @@ body {
 
 h1,h2{
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
     margin:0;
     margin-bottom: 10px;
     line-height: 31.4286px;
 }
+
 
 .v-center{
     left: 50%;
@@ -77,6 +79,7 @@ h1,h2{
     text-align: center;
     text-transform: uppercase;
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
 }
 
 #home-slider .carousel-control {
@@ -328,9 +331,9 @@ header{
 }
 
 .panel-info>.panel-heading {
-    background-color: transparent;
-    border-color:2px solid #1997c6;
-    color: #1997c6;
+    background-color: transparent !important;
+    border-color:2px solid #1997c6!important;
+    color: #1997c6 !important;
 }
 
 .panel-info>.panel-heading h4,.panel-info>.panel-heading p{
@@ -450,7 +453,7 @@ a.careers:hover,a.careers:focus{
   transform: rotateY(180deg);
   box-sizing: border-box;
   color: #fff;
-  padding: 15px;
+  padding: 6px;
   padding-top: 45px;
   text-align: center;
   background-color: #367AB5;
@@ -479,6 +482,7 @@ a.careers:hover,a.careers:focus{
     line-height: 1em;
     color: #367AB5;
     font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 100;
     display: block;
     margin-top: 80px;
     letter-spacing: -1px;
@@ -521,6 +525,13 @@ a.careers:hover,a.careers:focus{
     text-transform: uppercase;
     letter-spacing: 2px;
     display: block;
+     font-weight: 100 !important;
+}
+
+@media (max-width: 768px){
+.block p {
+    font-size:10px;
+}
 }
 
 @media (max-width: 767px){
@@ -532,10 +543,11 @@ a.careers:hover,a.careers:focus{
     margin-top: 50px;
 }
 .block .face.back {
-  padding-top: 5px;
+  padding-top: 5%;
+
  }
 .block p {
-    font-size: 10px;
+    font-size: 9px;
 }
 
 .v-center-pr {
@@ -548,6 +560,14 @@ a.careers:hover,a.careers:focus{
 
 }
 
+@media (max-width: 468px){
+.block .face.back {
+  padding-top: 15%;
+ }
+ .block p {
+    font-size: 10px;
+}
+}
 @media (min-width: 448px) and (max-width: 767px){
 .v-center {
     margin-top: 22%;
@@ -612,7 +632,7 @@ color: #fff;
     font-weight: 300;
     font-style: normal;
     font-size: 100%;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+   
     vertical-align: baseline;
     line-height: normal;
     -moz-box-sizing: border-box;
@@ -629,47 +649,36 @@ color: #fff;
 }
 
 #slideit {
-    z-index: 9999;
+  
     position: fixed;
     width: auto;
     height: 100%;
     top: 5%;
     right: 0
+
 }
 
-#slideit section {
+#slideit .section {
     margin: 0;
     overflow: hidden;
-    width: 67px;
+     z-index: 9999;
     height: auto;
     right: 0;
     top: 65%;
     position: absolute;
-    z-index: 10;
+     width: 67px;
     background: #fff;
-    -webkit-backface-visibility: hidden
-}
-/*
-#slideit input#close-item:checked~section,
-#slideit section {
-    -webkit-transform: translateX(100%);
-    -moz-transform: translateX(100%);
-    -ms-transform: translateX(100%);
-    -o-transform: translateX(100%);
-    transform: translateX(100%)
+   
 }
 
-#slideit input#open-item:checked~section {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0)
-}
-*/
-#slideit section .wrap {
+
+
+
+
+
+#slideit .section .wrap {
     position: relative;
-    width: 100%;
+    width: auto;
     height: auto
 }
 
@@ -677,7 +686,7 @@ color: #fff;
 #slideit .package,
 #slideit .row,
 #slideit .title,
-#slideit section .wrap {
+#slideit .section .wrap {
     float: left
 }
 
@@ -686,7 +695,7 @@ color: #fff;
 }
 
 #slideit .title {
-    width: 100%;
+   
     display: block;
     padding: 5px;
     padding-left: 5px;
@@ -697,17 +706,7 @@ color: #fff;
     border: ridge 1px #E37F03;
 }
 
-#slideit .row {
-    width: 100%;
-    display: block;
-    margin-bottom: 12px;
-    cursor: default
-}
 
-#slideit .row:hover,
-#slideit a.more:hover {
-    color: #222
-}
 
 
 #slideit label.close,
@@ -718,9 +717,9 @@ color: #fff;
     color: #fff;
     border: ridge 1px #E37F03;
     max-width: none;
-    right: -101px;
+   
 }
-/*
+
 #slideit label.open {
     font-size: 14px;
     font-weight: 700;
@@ -733,7 +732,7 @@ color: #fff;
     margin: 0 auto;
     padding: 10px 0;
     text-transform: uppercase;
-    z-index: 1
+      z-index: 9999;
 }
 
 #slideit input#close-item:checked~label.open {
@@ -748,16 +747,17 @@ color: #fff;
     font-size: 20px;
     background: #E37F03;
     color: #fff;
-    width: 22px;
+    width:35%   ;
     z-index: 999
+
 }
+
 
 #slideit label.close:focus,
 #slideit label.close:hover {
     background: #E37F03;
 }
-*/
-/*
+
 #slideit .row,
 #slideit a,
 #slideit label {
@@ -768,7 +768,7 @@ color: #fff;
     transition: all .1s ease-in-out
 }
 
-#slideit section {
+#slideit .section {
     -webkit-transition: all .4s cubic-bezier(0.2, .6, .3, 1);
     -moz-transition: all .4s cubic-bezier(0.2, .6, .3, 1);
     -ms-transition: all .4s cubic-bezier(0.2, .6, .3, 1);
@@ -783,4 +783,41 @@ color: #fff;
     -o-transition: right .3s ease .4s, background .1s ease, color .1s ease;
     transition: right .3s ease .4s, background .1s ease, color .1s ease
 }
-*/
+
+#slideit .open-label,#slideit .open-section{
+    visibility: visible;
+    opacity:9999;
+    right:0 !important;
+}   
+#slideit .close-label,#slideit .close-section{
+    visibility: hidden;
+    opacity: 0;
+    right:-101px;
+    width:0;
+    height:0;
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.4.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.4.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.4.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.4.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.4.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.fa-twitter:before {
+  content: "\f099";
+}
+.fa-facebook-f:before,
+.fa-facebook:before {
+  content: "\f09a";
+}
